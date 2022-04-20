@@ -1,12 +1,17 @@
 
 let secuenciaMaquina = [];
 let secuenciaUsuario = [];
+let ronda=0;
 document.querySelector("button[type=button]").onclick = comenzarJuego
 
 function comenzarJuego (){
    // resaltar()
-    //obtenerCuadroAleatorio()
-    getRandomArbitrary(2,6)
+    obtenerCuadroAleatorio()
+    
+}
+
+function manejarRonda (){
+secuenciaUsuario.forEach($cuadro)
 }
 
 function resaltar($cuadro){
@@ -15,16 +20,16 @@ function resaltar($cuadro){
         $cuadro.style.opacity = 0.5 
     }, 500);
     
-}
-function obtenerCuadroAleatorio(min,max){
-    const aleatorio = Math.random()
+};
 
-   return console.log(aleatorio)
-}
-
-function getRandomArbitrary() {
-    const cuadro = document.querySelectorAll('.cuadro')
-    const aleatorio= Math.floor(Math.random() * (cuadro.length+1))
+function obtenerCuadroAleatorio() {
+    const $cuadros = document.querySelectorAll('.cuadro');
+    const Indice= Math.floor(Math.random() * ($cuadros.length));
    
-   return console.log(aleatorio)
-  }
+   return console.log($cuadros[indice]);
+  };
+function reiniciarPartida(){
+    secuenciaMaquina=[];
+    secuenciaUsuario=[];
+    ronda=0
+};
