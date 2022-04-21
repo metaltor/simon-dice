@@ -105,5 +105,9 @@ function perder(){
     actualizarBarraEstado('Perdiste!!!!!')
     setTimeout(function(){
         alert('vuelve a intentarlo')
-    },2000)
+        actualizarBarraEstado('Para empezar a jugar presiona el boton "Empezar"')
+        actualizarNumeroRonda('-')
+        bloquearClickUsuario()
+    },1000)
+    
 }
