@@ -41,9 +41,10 @@
       desbloquearInputUsuario();
     }, RETRASO_TURNO_JUGADOR);
 
-    secuenciaUsuario = [];
+    //secuenciaUsuario = [];
     ronda++;
     actualizarNumeroRonda(ronda);
+    console.log(secuenciaUsuario)
   }
 
   function manejarInputUsuario(e) {
